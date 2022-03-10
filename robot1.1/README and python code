@@ -1,0 +1,17 @@
+THe logger is now working. This is the code to receive it on the python side. 
+
+
+# Get ArtemisBLEController object
+ble = get_ble_controller()
+
+# Connect to the Artemis Device
+ble.connect()
+
+log=[]
+def updateValue(uuid,value):
+    global log
+    log.append(value)
+    # log.append(ble.bytearray_to_float(value))
+    
+ble.start_notify(ble.uuid['RX_STRING'],updateValue)
+
