@@ -1,6 +1,7 @@
 The logger is now working. Robot class has been defined and all three sensors seem to be working. HOWEVER, the IMU code still needs to be changed to adjust for 
 the sensor's orientation in the robot. It is important to accurately calculate and keep track of yaw. Make sure that this is done and properly implemented using micros()
-not millis() for more accurate integration of the sensor readings!
+not millis() for more accurate integration of the sensor readings! Additionally make sure the startTime on the yaw for the first integration term is accurate!!!
+This is very important. Potential solution is to use a global variable!
 
 This is the code to receive it on the python side. 
 
